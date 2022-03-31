@@ -1,18 +1,21 @@
 import { EventEmitter } from '@angular/core';
+import { Ingredient } from '../shared/ingredient-model';
 import { Recipe } from './recipe.model';
 
 export class RecipeService {
   recipeSelector = new EventEmitter<Recipe>();
   private recipes: Recipe[] = [
     new Recipe(
-      'A Test Recipe',
-      'This is a test',
-      'https://freesvg.org/img/RecipeBook.png'
+      'Chicken Rice Platter',
+      'Grilled and seasoned chicken served over rice',
+      'https://c.pxhere.com/photos/3b/0f/asian_brown_catering_cheese_chicken_cholesterol_colorful_cookery-819400.jpg!d',
+      [new Ingredient('Chicken', 1), new Ingredient('Rice', 1)]
     ),
     new Recipe(
-      'Another Test Recipe',
-      'This is a test',
-      'https://freesvg.org/img/RecipeBook.png'
+      'Lamb Rice Platter',
+      'Grilled and seasoned lamb served over rice',
+      'https://p1.pxfuel.com/preview/464/220/849/beef-hearts-rice-cuisine-gourmet-cilantro-white-plate.jpg',
+      [new Ingredient('Chicken', 1), new Ingredient('Rice', 1)]
     ),
   ];
 
